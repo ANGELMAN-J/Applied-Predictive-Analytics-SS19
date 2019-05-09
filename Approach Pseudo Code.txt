@@ -1,0 +1,28 @@
+Do A/B testing to:
+a) estimate treatment effect
+b) evaluate current response model
+
+Compare standard A/B test to our method:
+a) iso-expected cost (/risk) > expected deviation from true effect (empirically estimated by running whole thing multiple times)
+b) iso-accuracy > estimate cost for same expected accuracy
+
+1. Simulate data
+- Setting: churn modeling
+	- response: churn yes/no
+	- variables: current LTV, Recency/Frequency/M whatever score
+	- decide on typical error costs for evaluation in real terms
+- known treatment effect
+- some relationship of X with y plus noise
+
+
+2. Build initial response model which imperfectly captures the relationship
+- logistic regression for simplicity
+- generate some data to train model
+
+3.
+A) do standard A/B testing
+- assign randomly
+- evaluate Cost and Accuracy
+B) do our method
+- assign proportional to predicted response
+-Evaluate Cost and Accuracy
